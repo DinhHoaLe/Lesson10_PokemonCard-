@@ -1,13 +1,155 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import 'react-modal/styles.css'; */
+
+
+.container{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  /* grid-template-rows: 330px 330px 330px; */
+  grid-gap: 20px;
+  border: 1px solid black;
+  max-width: 1200px;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  padding: 50px 0px;
+  place-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 330px; */
+}
+
+.information{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.number{
+  color: #ababab;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.name{
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.box_img{
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.system{
+  gap: 5px;
+  display: flex;
+}
+
+.systemName{
+  border-radius: 3px;
+  width: 80px;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Grass{
+  background-color: rgb(156, 205, 80);
+  color: black;
+}
+
+.Poison{
+  background-color: rgb(185, 127, 202);
+  color: white;
+}
+
+.Fire{
+  background-color: rgb(255, 123, 0);
+  color: white;
+}
+
+.Flying{
+  background: linear-gradient(to bottom,rgb(61, 199, 238) 50%, rgba(128, 128, 128, 0.5) 50%);
+  color: black;
+}
+
+.Water{
+  background-color: rgb(69, 147, 196);
+  color: white;
+}
+
+.Bug{
+  background-color: rgb(113, 157, 62);
+  color: white;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  /* width: 300px; */
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.pagination {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination li a {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.pagination li a:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination li.active a {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
 }
